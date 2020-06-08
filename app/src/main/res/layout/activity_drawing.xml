@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:text="@string/drawing"
         android:textSize="36dp"
-        android:layout_marginVertical="20dp"/>
+        android:layout_marginVertical="20dp" />
 
     <co.tashawych.hobbies.DrawingCanvas
         android:id="@+id/drawingCanvas"
@@ -22,5 +22,53 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/canvasBackground" />
+
+    <LinearLayout
+        android:id="@+id/paintColors"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/selected_button"
+            android:text="@string/black"
+            android:onClick="setPaintColor"
+            android:tag="@string/blackColor"
+            style="@style/Widget.AppCompat.Button.Borderless" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="@string/blue"
+            android:onClick="setPaintColor"
+            android:tag="@string/blueColor"
+            style="@style/Widget.AppCompat.Button.Borderless" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="@string/green"
+            android:onClick="setPaintColor"
+            android:tag="@string/greenColor"
+            style="@style/Widget.AppCompat.Button.Borderless" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="@string/red"
+            android:onClick="setPaintColor"
+            android:tag="@string/redColor"
+            style="@style/Widget.AppCompat.Button.Borderless" />
+    </LinearLayout>
 
 </LinearLayout>

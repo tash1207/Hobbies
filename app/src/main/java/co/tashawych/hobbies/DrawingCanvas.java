@@ -3,6 +3,7 @@ package co.tashawych.hobbies;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
@@ -24,13 +25,17 @@ public class DrawingCanvas extends View {
     private void setUp() {
         canvasPaint = new Paint(Paint.DITHER_FLAG);
         drawPaint = new Paint();
-        drawPaint.setColor(0xFF0000AA);
+        drawPaint.setColor(0xFF000000);
         drawPaint.setAntiAlias(true);
         drawPaint.setStrokeWidth(20);
         drawPaint.setStyle(Paint.Style.STROKE);
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
         drawPath = new Path();
+    }
+
+    public void setColor(String color) {
+        drawPaint.setColor(Color.parseColor(color));
     }
 
     @Override
